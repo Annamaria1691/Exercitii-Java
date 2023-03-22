@@ -1,3 +1,12 @@
+/*Sa se implementeze urmatoarele metode:
+ metoda “transformaInGradeCelsius” returneaza temperatura in grade Celsius echivalenta cu temperatura Fahrenheit
+folosind formula: C=5/9 * (F-32) ;
+ metoda “transformaInGradeFahrenheit“ returneaza temperatura in grade Fahrenheit echivalenta cu temperatura Celsius
+folosind formula: F=9/5 *C+32 ;
+Folositi aceste metode pentru a scrie un program care primeste din linia de comanda sau dintr-o fereastra de tip JOptionPane
+doua valori reale ce reprezinta temperaturi Celsius, respectiv Fahrenheit si afiseaza temperatura echivalenta in celalalt
+sistem de temperaturi*/
+
 import javax.swing.*;
 public class convertorTemperaturi {
     public static double transformaInGradeCelsius(double a) {
