@@ -1,0 +1,21 @@
+import javax.swing.*;
+public class convertorTemperaturi {
+    public static double transformaInGradeCelsius(double a) {
+        double b=((5 / 9) * a ) - 32;
+        return b;
+    }
+    public static double transformaInGradeFahrenheit(double a) {
+        double b=((9 / 5) * a) + 32;
+        return b;
+    }
+
+    public static void main(String[] args) {
+        double x, y;
+        String s1 =JOptionPane.showInputDialog("Introduceti valoarea in grade Celsius ce urmeaza a fi convertita in Farenheit");
+        x = Double.parseDouble(s1);
+        String s2 =JOptionPane.showInputDialog("Introduceti valoarea in grade Fahrenheit ce urmeaza a fi convertita in Celsius");
+        y = Double.parseDouble(s2);
+        JOptionPane.showMessageDialog(null, "Prima valoare in grade Fahrenheit este:" + transformaInGradeFahrenheit(x));
+        JOptionPane.showMessageDialog(null, "A doua valoare in grade Celsius este:" + transformaInGradeCelsius(y));
+    }
+}
