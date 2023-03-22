@@ -1,0 +1,22 @@
+/*Scrieti o metoda numita afiseazaPatratStea care afiseaza un patrat umplut cu simbolul “*” a carui latura este specificata ca
+parametru al metodei. Incorporati aceasta metoda intr-un program care preia din linia de comanda o valoare intreaga pentru
+latura si realizeaza afisarea patratului prin apelarea metodei patratStea.*/
+
+import javax.swing.*;
+public class PatratStea {
+
+    public static void afiseazaPatratStea(int a) {
+        for (int i = 0; i < a; i++) {
+            for (int j = 0; j < a; j++) {
+                System.out.print("* ");
+            }
+            System.out.print("\n");
+        }
+    }
+    public static void main(String[] args) {
+        int x;
+        String s = JOptionPane.showInputDialog("Introduceti dimensiunea laturii patratului:");
+        x = Integer.parseInt(s);
+        afiseazaPatratStea(x);
+    }
+}
