@@ -1,22 +1,27 @@
 /*Scrieti o metoda numita afiseazaPatratStea care afiseaza un patrat umplut cu simbolul “*” a carui latura este specificata ca
 parametru al metodei. Incorporati aceasta metoda intr-un program care preia din linia de comanda o valoare intreaga pentru
-latura si realizeaza afisarea patratului prin apelarea metodei patratStea.*/
+latura si realizeaza afisarea patratului prin apelarea metodei patratStea.
+ Modificati metoda “afiseazaPatratStea” din problema anterioara pentru a desena patrate formate cu orice caracter specificat
+in semnatura metodei.*/
 
 import javax.swing.*;
 public class PatratStea {
 
-    public static void afiseazaPatratStea(int a) {
+    public static void afiseazaPatratStea(int a,char b) {
         for (int i = 0; i < a; i++) {
             for (int j = 0; j < a; j++) {
-                System.out.print("* ");
+                System.out.print(b);
             }
             System.out.print("\n");
         }
     }
     public static void main(String[] args) {
         int x;
+        char litera;
         String s = JOptionPane.showInputDialog("Introduceti dimensiunea laturii patratului:");
         x = Integer.parseInt(s);
-        afiseazaPatratStea(x);
+        String s1=JOptionPane.showInputDialog("Introduceti caracterul pentru a desena patratul");
+        litera=s1.charAt(0);
+        afiseazaPatratStea(x,litera);
     }
 }
