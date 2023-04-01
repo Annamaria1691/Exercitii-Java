@@ -1,0 +1,28 @@
+/*Un numar intreg se numeste numar perfect daca divizorii sai (inclusiv 1), mai mici strict decat numarul respectiv, adunati
+dau numarul. De exemplu 6=1+2+3 este un numar perfect. Scrieti o metoda “perfect” care determina daca parametrul numar
+este perfect. Folositi aceasta metoda intr-un program care determina si afiseaza toate numerele perfecte intre 1 si 1000. Care
+sunt numerele perfecte intre 1 si 10 000 ? */
+
+public class NUmarPerfect {
+    public static boolean perfect(int a) {
+        int suma = 0;
+        for (int i = 1; i < a; i++) {
+            if (a % i == 0) suma += i;
+        }
+        return suma == a;
+    }
+    public static void main(String[] args) {
+        int n = 1000;
+        System.out.println("Numerele perfecte sunt:");
+        for (int i = 1; i < n; i++) {
+            if (perfect(i)) System.out.print(i + ", ");
+        }
+        int m = 10000;
+        System.out.println("\nNumerele perfecte sunt:");
+        for (int i = 1; i < m; i++) {
+            if (perfect(i)) System.out.print(i + ", ");
+
+        }
+    }
+}
+
