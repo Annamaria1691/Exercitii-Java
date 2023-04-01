@@ -1,0 +1,14 @@
+/*Sa se scrie un program care calculeaza si afiseaza c.m.m.d.c dintre 2 numere intregi preluate din linia de comanda, folosind
+urmatoarea definitie recursiva:
+cmmdc(v, u mod v), daca v!= 0 si
+cmmdc(u,v)=u daca v=0*/
+
+public class Main {
+    public static int cmmdc(int u,int v){
+        if(v==0) return u;
+        return cmmdc(v,u%v);
+    }
+    public static void main(String[] args) {
+        System.out.println(cmmdc(Integer.parseInt(args[0]),Integer.parseInt(args[1])));
+    }
+}
