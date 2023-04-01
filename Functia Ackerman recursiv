@@ -1,0 +1,21 @@
+/*Fie definitia funcţiei lui Ackerman, 𝑎𝑐: ℕ𝑥ℕ → ℕ
+ac(m,n)=
+1)𝑛 + 1, 𝑑𝑎𝑐𝑎 𝑚 = 0
+2)𝑎𝑐(𝑚 − 1, 1), 𝑑𝑎𝑐𝑎 𝑛 = 0
+3)ac(m-1,ac(m,n-1)),daca m,n > 0
+*/
+
+
+public class Main {
+    public static int ac(int m,int n){
+        if(m==0)
+            return n+1;
+        else if(n==0)
+            return ac(m-1,1);
+        return ac(m-1,ac(m,n-1));
+    }
+
+    public static void main(String[] args) {
+        System.out.println(ac(Integer.parseInt(args[0]),Integer.parseInt(args[1])));
+    }
+}
