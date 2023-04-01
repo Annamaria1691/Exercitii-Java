@@ -1,0 +1,35 @@
+/*Valoarea lui ex poate fi calculatǎ cu urmǎtoarea formulǎ:
+ex = (Suma) xn/n! = 1 + x + x2/2! + x3/3! + …., n=0,∞
+Sǎ se scrie un program care calculeaza valoarea lui ex cu ajutorul acestei formule. Cum seria este infinitǎ, calculul
+se terminǎ când termenul general este mai mic decât  (a cǎrui valoare este preluatǎ din linia de comandǎ): | xn/n! |
+<epsilon. Epsilon reprezintǎ precizia ce va aproxima valoarea ex. Programul va conţine metode pentru calculul nerecursiv al
+factorialului şi al sumei. */
+
+import javax.swing.*;
+public class FormulaMatematica {
+    public static long factorial(long a) {
+        long p = 1;
+        for (int i = 1; i <= a; i++) p *= i;
+        return p;
+    }
+    public static double calcul(int nr, double epsilon) {
+        double suma = 0;
+        int i = 0;
+        while (true) {
+            long produs;
+            suma += Math.pow(nr, i);
+            produs = factorial(i);
+            suma /= produs;
+            i++;
+            if (suma < epsilon) break;
+        }
+        return suma;
+    }
+    public static void main(String[] args) {
+        String s= JOptionPane.showInputDialog("Introduceti numarul n:");
+        int nr=Integer.parseInt(s);
+        String s1= JOptionPane.showInputDialog("Introduceti nr epsilon:");
+        double e=Double.parseDouble(s1);
+        System.out.println("Suma este:" + calcul(nr,e));
+    }
+}
