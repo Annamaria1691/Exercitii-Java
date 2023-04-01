@@ -1,0 +1,13 @@
+/*Să se scrie un program care calculeaza şi afişeaza a la puterea b dupa formula:
+1)1, 𝑑𝑎𝑐𝑎 𝑏 = 0,
+2)𝑎 ∗ 𝑃(𝑎, 𝑏 − 1) */
+
+public class Main {
+    public static int P(int a, int b){
+        if(b==0) return 1;
+        return a*P(a,b-1);
+    }
+    public static void main(String[] args) {
+        System.out.println("a la puterea b este:" + P(Integer.parseInt(args[0]),Integer.parseInt(args[1])));
+    }
+}
